@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.section {
+  height: 100vh;
+  position: relative;
+}
+
+.vertically-center{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items:center;
+}
+
+.arrow {
+  width: auto;
+  text-align: center;
+  font-size: 30px;
+  animation: bouncy 1s infinite ease-in-out alternate;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.arrow.down {
+  bottom: 30px;
+}
+.arrow.up {
+  top: 30px;
+}
+
+@keyframes bouncy {
+  100% { transform: translate3d(0, 5px, 0); }
+}
+
+.body {
+  width: 400px;
+  height: 480px;
+  display: block;
+  position: relative;
+}
+
+.head {
+  width: 80px;
+  height: 80px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 118px;
+  z-index: 1;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 18px;
+}
+
+.eyes {
+  width: 45px;
+  height: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.eye {
+  background: black;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform-origin: 50%;
+  animation: blink 5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1, .05);
+  }
+  5%,
+  95% {
+      transform: scale(1, 1);
+  }
+}
+
+.mouth{
+  width: 45px;
+  height: 20px;
+  border: solid 5px #000;
+  border-color:#000 transparent transparent transparent;
+  border-radius: 50%/10px 10px 0 0;
+  transform: rotateX(180deg);
+}
+
+.torso {
+  width: 6px;
+  height: 200px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 80px;
+  left: 156px;
+}
+
+.leftarm {
+  width: 100px;
+  height: 6px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 165px;
+  left: 75px;
+  transform: rotate(-45deg);
+}
+
+.leftwrist {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 201px;
+  left: 88px;
+  transform-origin: top;
+}
+
+.rightarm {
+  width: 100px;
+  height: 6px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 117px;
+  left: 155px;
+  transform: rotate(-20deg);
+  transform-origin: top;
+}
+
+.rightwrist {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 248px;
+  transform-origin: top;
+  animation: wave 0.5s alternate infinite ease-in-out;
+  transform-origin: center bottom;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+.leftleg {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 275px;
+  left: 155px;
+  transform: rotate(12deg);
+  transform-origin: top;
+}
+
+.rightleg {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 275px;
+  left: 157px;
+  transform: rotate(-12deg);
+  transform-origin: top;
+}
+
+.leftfoot {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 370px;
+  left: 134px;
+}
+
+.rightfoot {
+  width: 6px;
+  height: 100px;
+  border: 3px solid black;
+  display: block;
+  position: absolute;
+  top: 370px;
+  left: 178px;
+}
+
+.next-section{
+  cursor: pointer;
+}
+
+.cloud {
+	width: 350px; height: 120px;
+
+	background: #ccc;
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+
+	position: relative;
+	margin: 120px auto 20px;
+  animation: bouncy 1s infinite ease-in-out alternate;
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: #ccc;
+	z-index: -1
+}
+
+.cloud:after {
+	width: 100px; height: 100px;
+	top: -50px; left: 50px;
+
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+}
+
+.cloud:before {
+	width: 180px; height: 180px;
+	top: -90px; right: 50px;
+	border-radius: 200px;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+}
+
+.contact{
+  font-size: 200px;
+  color: #ccc;
+  width: 100%;
+  padding: 100px;
+}
